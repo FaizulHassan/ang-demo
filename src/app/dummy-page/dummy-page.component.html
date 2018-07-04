@@ -1,0 +1,30 @@
+<br><br>
+<div class="container">
+  <h1>Hero Form</h1>
+  <form #heroForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.names" required>
+      <p>{{model.names}}</p>
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">Alter Ego</label>
+      <input type="text" class="form-control" id="alterEgo" name="ego" [(ngModel)]="model.ego">
+      <p>{{model.ego}}</p>
+    </div>
+
+    <div class="form-group">
+      <label for="heroName">Hero</label>
+      <select class="form-control" id="heroName" name="heroName" [(ngModel)]="model.heroName">
+        <option *ngFor="let hero of heroName" [value]="hero">{{hero}}</option>
+      </select>
+      <p>{{model.heroName}}</p>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>
+<hr>
+{{faizulHassan}}
